@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Body styling */
+
+body {
+    background-color: rgb(0, 0, 24);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+
+/* Navbar Styling */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgb(14, 14, 49);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: rgb(87, 87, 155);
+    transform: scale(1.1);
+}
+
+
+/* Hamburger Menu */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+
+/* Main content section */
+
+main {
+    padding: 30px;
+}
+
+.firstsection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.leftsection {
+    font-size: 2.5rem;
+    font-weight: 500;
+    max-width: 45%;
+    line-height: 1.2!important;
+}
+
+.rightsection img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.purple {
+    color: rgb(120, 26, 207);
+}
+
+#element {
+    color: rgb(120, 26, 207);
+    font-weight: 600;
+}
+
+hr {
+    border: 0;
+    background: #9c97f1;
+    height: 1px;
+    margin: 40px 0;
+}
+
+.secondsection {
+    max-width: 80vw;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.secondsection h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgb(120, 26, 207);
+}
+
+.secondsection ul {
+    list-style-type: none;
+    padding: 0;
+    color: white;
+}
+
+.secondsection ul li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.buttons a {
+    text-decoration: none;
+}
+
+.buttons button {
+    background-color: rgb(120, 26, 207);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: rgb(87, 87, 155);
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 1200px) {
+    /* For tablets and smaller screens */
+    .firstsection {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .leftsection {
+        font-size: 2rem;
+        max-width: 100%;
+    }
+    .rightsection img {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* For mobile devices */
+    .leftsection {
+        font-size: 1.8rem;
+        max-width: 100%;
+        text-align: center;
+    }
+    .rightsection img {
+        max-width: 90%;
+        margin-top: 20px;
+    }
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li a {
+        font-size: 1.2rem;
+        padding: 10px;
+        width: 100%;
+        display: block;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .hamburger.open div {
+        background-color: rgb(87, 87, 155);
+    }
+    nav ul.open {
+        display: flex;
+    }
+    .firstsection {
+        padding: 20px;
+    }
+    .secondsection h1 {
+        font-size: 1.8rem;
+    }
+    hr {
+        margin: 30px 0;
+    }
+}
