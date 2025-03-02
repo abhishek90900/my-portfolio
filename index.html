@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="left">
+                <h1>Abhishek's Portfolio</h1>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section class="firstsection" id="home">
+            <div class="leftsection">
+                <h2>Hi, my name is <span class="purple">Abhishek</span></h2>
+                <p>and I am a passionate</p>
+                <span id="element"></span>
+                <!-- Two Buttons at the Bottom -->
+                <div class="buttons">
+                    <a href="resume.pdf" download><button>Resume Download</button></a>
+                    <a href="https://github.com/abhishek90900" target="_blank"><button>GitHub</button></a>
+                </div>
+            </div>
+            <div class="rightsection">
+                <img src="bg png.png" alt="Abhishek's image" />
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- About Section -->
+        <section class="secondsection" id="about">
+            <h1>About Me</h1>
+            <p>Hi, I’m Abhishek, a passionate developer with a strong focus on web development, mobile apps, and AI engineering. I believe in creating meaningful applications that solve real-world problems.</p>
+        </section>
+
+        <!-- Services Section -->
+        <section class="secondsection" id="services">
+            <h1>Services</h1>
+            <ul>
+                <li>Web Development</li>
+                <li>Mobile App Development</li>
+                <li>AI Engineering</li>
+                <li>UI/UX Design</li>
+            </ul>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="secondsection" id="projects">
+            <h1>Projects</h1>
+            <p>Check out some of my custom projects below.</p>
+            <div class="projects">
+                <!-- You can add more projects here -->
+                <div class="project-item">
+                    <h3>Pustak kharide</h3>
+                    <p>Project Description</p>
+                    <button onclick="window.location.href='project-link'">View Project</button>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- Contact Section -->
+        <section class="secondsection" id="contact">
+            <h1>Contact Me</h1>
+            <p>If you would like to get in touch, feel free to reach out via email.</p>
+            <p>Email: <a href="mailto:mukherjeeabhishek613@gmail.com">mukherjeeabhishek613@gmail.com</a></p>
+            <form action="mailto:mukherjeeabhishek613@gmail.com" method="POST" enctype="multipart/form-data">
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Import Typed.js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'App Developer', 'AI Engineer'],
+            typeSpeed: 50,
+        });
+
+        function toggleMenu() {
+            document.querySelector('.hamburger').classList.toggle('open'); // Toggle hamburger color change
+            document.querySelector('nav ul').classList.toggle('open'); // Toggle navbar visibility
+        }
+    </script>
+</body>
+
+</html>
